@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-st.title("Meine erste Streamlit App")
+st.title("TEST")
 
 # !! WICHTIG: Eure Emails müssen in der App erscheinen!!
 
