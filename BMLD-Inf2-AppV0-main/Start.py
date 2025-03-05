@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 # Sidebar für Navigation
 st.sidebar.title("📌 Navigation")
-page = st.sidebar.radio("Wähle eine Seite", ["Startseite", "Notenrechner"])
+page = "Startseite"
 
 # --- Startseite ---
 if page == "Startseite":
