@@ -1,8 +1,8 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 
-# Sidebar für Navigation
-st.sidebar.title("📌 Navigation")
+
+
 page = "Startseite"
 
 # --- Startseite ---
