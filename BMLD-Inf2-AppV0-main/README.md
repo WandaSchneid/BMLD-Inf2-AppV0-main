@@ -1,9 +1,10 @@
 # BMLD-Inf2-AppV0
 
-Das leere Gerüst um eine App aufzubauen.
+Unsere ersten Versuche eine App zu gestalten
 
 ## Autor
 
-Samuel Wehrli (wehs@zhaw.ch)
+Riccardo Reich (reichri1@students.zhaw.ch)
+Wanda Schneid (schnewan@students.zhaw.ch)
 
 
