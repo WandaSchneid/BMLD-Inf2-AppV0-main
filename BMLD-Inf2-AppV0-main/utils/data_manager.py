@@ -1,5 +1,6 @@
 import fsspec, posixpath
 import streamlit as st
+import pandas as pd
 from utils.data_handler import DataHandler
 
 class DataManager:
@@ -210,3 +211,36 @@ class DataManager:
         keys = [key for key in st.data_reg.key() if key in self.session_state]
         for key in keys:
             self.save_data(key)
+
+
+    def append_record(self,session_state_key, record_dict):
+        """
+        Append a new record to a value stored in the session state. The value must be either a list or a DataFrame.
+
+        Args:
+            session_state_key (str): Key identifying the value in the session state
+            record_dict (dict): Dictionary containing the new record to append
+
+        Raises:
+            ValueError: If the session_state_key is not found in session state
+            ValueError: If the session state value is not a list or a DataFrame
+            ValueError: If the record_dict is not a dictionary
+
+        Returns:
+            None: The updated value is stored back in the session state
+
+        """
+        data_value = st.session_state[session_state_key]
+        
+        if not isinstance(record_dict, dict):
+            raise ValueError(f"DataManager: The record_dict must be a dictionary")
+        
+        if isinstance(data_value, pd.DataFrame):
+            data_value = pd.concat([data_value, pd.DataFrame([record_dict])], ignore_index=True)
+        elif isinstance(data_value, list):
+            data_value.append(record_dict)
+        else:
+            raise ValueError(f"DataManager: The session state value for key {session_state_key} must be a DataFrame or a list")
+        
+        st.session_state[session_state_key] = data_value
+        self.save_data(session_state_key)

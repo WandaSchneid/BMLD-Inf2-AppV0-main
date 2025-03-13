@@ -60,10 +60,3 @@ if page == "Notenrechner:":
             "grades": list(noten.values()),
             "average": durchschnitt
         }
-
-        # Initialisiere data_df im session_state, falls es nicht existiert
-        if 'data_df' not in st.session_state:
-            st.session_state['data_df'] = []
-
-        data_df = st.session_state['data_df']
-        DataManager().append_record(session_state_key='data_df', record_dict=result)
