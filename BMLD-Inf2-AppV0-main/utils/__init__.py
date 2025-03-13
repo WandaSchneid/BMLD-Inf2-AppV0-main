@@ -1,1 +1,1 @@
-# Empty file
+from .data_manager import DataManager

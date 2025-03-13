@@ -1,6 +1,21 @@
 import streamlit as st
 import matplotlib.pyplot as plt
+import pandas as pd
+from utils.data_manager import DataManager
+# === Initialize the data manager ===
+import pandas as pd
+from utils.data_manager import DataManager
 
+# initialize the data manager
+data_manager = DataManager(fs_protocol='webdav', fs_root_folder="App_Notenrechner")  # switch drive 
+
+# load the data from the persistent storage into the session state
+data_manager.load_user_data(
+    session_state_key='data_df', 
+    file_name='data.csv', 
+    initial_value = pd.DataFrame(), 
+    parse_dates = ['timestamp']
+    )
 
 
 page = "Startseite"
@@ -26,7 +41,7 @@ if page == "Startseite":
     st.markdown("---")
     st.write("👨‍🎓 Entwickelt für das **2. Semester (30 ECTS)**")
 
-
+   
 
 
 

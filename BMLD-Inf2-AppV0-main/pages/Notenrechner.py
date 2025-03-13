@@ -1,5 +1,6 @@
 import streamlit as st
 import matplotlib.pyplot as plt
+from utils.data_manager import DataManager
 
 st.title("Notenrechner BMLD Frühlingssemseter 2025")
 
@@ -50,5 +51,19 @@ if page == "Notenrechner:":
         ax.set_ylim(1, 6)
         ax.set_title("Deine Notenübersicht")
         plt.xticks(rotation=45, ha='right')
-
+        
         st.pyplot(fig)
+
+        # Definiere das result Dictionary
+        result = {  
+            "module": list(noten.keys()),
+            "grades": list(noten.values()),
+            "average": durchschnitt
+        }
+
+        # Initialisiere data_df im session_state, falls es nicht existiert
+        if 'data_df' not in st.session_state:
+            st.session_state['data_df'] = []
+
+        data_df = st.session_state['data_df']
+        DataManager().append_record(session_state_key='data_df', record_dict=result)
