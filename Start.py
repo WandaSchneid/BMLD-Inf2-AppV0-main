@@ -2,12 +2,14 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import pandas as pd
 from utils.data_manager import DataManager
-# === Initialize the data manager ===
-import pandas as pd
-from utils.data_manager import DataManager
+from utils.login_manager import LoginManager
 
 # initialize the data manager
-data_manager = DataManager(fs_protocol='webdav', fs_root_folder="App_Notenrechner")  # switch drive 
+data_manager = DataManager(fs_protocol='webdav', fs_root_folder="BMLD_App_DB")  # switch drive 
+
+# initialize the login manager
+login_manager = LoginManager(data_manager)
+login_manager.login_register()  # open login/register page
 
 # load the data from the persistent storage into the session state
 data_manager.load_user_data(
