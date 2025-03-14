@@ -1,9 +1,16 @@
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 import streamlit as st
 import matplotlib.pyplot as plt
 from utils.data_manager import DataManager
-
 from utils.login_manager import LoginManager
-LoginManager().go_to_login('Start.py') 
+
+# Überprüfen, ob die Seite im richtigen Kontext aufgerufen wird
+if 'login' not in st.session_state:
+    LoginManager().go_to_login('Start.py') 
+
 st.title("Notenrechner BMLD Frühlingssemseter 2025")
 
 st.write("Diese Seite berechnet deine Note.")
@@ -62,5 +69,5 @@ if page == "Notenrechner:":
             "grades": list(noten.values()),
             "average": durchschnitt
         }
-    from utils.data_manager import DataManager
-    DataManager().append_record(session_state_key='data_df', record_dict=result)  # update data in session state and storage
+
+        DataManager().append_record(session_state_key='data_df', record_dict=result)  # update data in session state and storage

@@ -15,10 +15,8 @@ login_manager.login_register()  # open login/register page
 data_manager.load_user_data(
     session_state_key='data_df', 
     file_name='data.csv', 
-    initial_value = pd.DataFrame(), 
-    parse_dates = ['timestamp']
+    initial_value = pd.DataFrame()
     )
-
 
 page = "Startseite"
 
@@ -43,14 +41,10 @@ if page == "Startseite":
     st.markdown("---")
     st.write("👨‍🎓 Entwickelt für das **2. Semester (30 ECTS)**")
 
-   
+    st.write("""
+    Diese App wurde von folgenden Personen entwickelt:
+    - Wanda Schneid (schnewan@students.zhaw.ch)
+    - Riccardo Reich (reichri1@students.zhaw.ch)
 
-
-
-"""
-Diese App wurde von folgenden Personen entwickelt:
-- Wanda Schneid (schnewan@students.zhaw.ch)
-- Riccardo Reich (reichri1@students.zhaw.ch)
-
-Diese App ist das leere Gerüst für die App-Entwicklung im Modul Informatik 2 (BMLD/ZHAW)
-"""
+    Diese App ist das leere Gerüst für die App-Entwicklung im Modul Informatik 2 (BMLD/ZHAW)
+    """)
