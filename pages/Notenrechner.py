@@ -69,7 +69,7 @@ if page == "Notenrechner:":
             "module": list(noten.keys()),
             "grades": list(noten.values()),
             "average": [durchschnitt] * len(noten),  # Wiederhole den Durchschnitt für jedes Modul
-            "timestamp": [pd.Timestamp.now()] * len(noten)  # Füge einen Zeitstempel für jedes Modul hinzu
+            "timestamp": pd.Timestamp.now()  # Füge einen einzelnen Zeitstempel hinzu
         }
 
         # Speichern Sie die Daten in der Session
