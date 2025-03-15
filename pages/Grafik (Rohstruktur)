@@ -1,23 +1,27 @@
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 # ====== Start Login Block ======
 from utils.login_manager import LoginManager
 LoginManager().go_to_login('Start.py')  
 # ====== End Login Block ======
 
 # ------------------------------------------------------------
-# === BMI Grafik ===
+# === Noten Grafik ===
 import streamlit as st
 
-st.title('BMI Verlauf')
+st.title('Noten Verlauf')
 
 data_df = st.session_state['data_df']
 if data_df.empty:
-    st.info('Keine BMI Daten vorhanden. Berechnen Sie Ihren BMI auf der Startseite.')
+    st.info('Keine Noten vorhanden. Berechnen Sie Ihre Noten')
     st.stop()
 
 # Weight over time
 st.line_chart(data=data_df.set_index('timestamp')['weight'], 
                 use_container_width=True)
-st.caption('Gewicht über Zeit (kg)')
+st.caption('Noten Zeitverlauf')
 
 # Height over time 
 st.line_chart(data=data_df.set_index('timestamp')['height'],
