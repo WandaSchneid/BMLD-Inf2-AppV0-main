@@ -18,17 +18,17 @@ if data_df.empty:
     st.info('Keine Noten vorhanden. Berechnen Sie Ihre Noten')
     st.stop()
 
-# Weight over time
-st.line_chart(data=data_df.set_index('timestamp')['weight'], 
+# Noten über Zeit
+st.line_chart(data=data_df.set_index('timestamp')['average'], 
                 use_container_width=True)
 st.caption('Noten Zeitverlauf')
 
-# Height over time 
-st.line_chart(data=data_df.set_index('timestamp')['height'],
+# Notenverteilung als Balkendiagramm
+st.bar_chart(data=data_df.set_index('timestamp')['grades'], 
                 use_container_width=True)
-st.caption('Größe über Zeit (m)')
+st.caption('Notenverteilung')
 
-# BMI over time
-st.line_chart(data=data_df.set_index('timestamp')['bmi'],
+# Module über Zeit
+st.line_chart(data=data_df.set_index('timestamp')['module'],
                 use_container_width=True)
-st.caption('BMI über Zeit')
+st.caption('Module über Zeit')

@@ -4,6 +4,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 import streamlit as st
 import matplotlib.pyplot as plt
+import pandas as pd  # Import pandas
 from utils.data_manager import DataManager
 from utils.login_manager import LoginManager
 
@@ -67,7 +68,15 @@ if page == "Notenrechner:":
         result = {  
             "module": list(noten.keys()),
             "grades": list(noten.values()),
-            "average": durchschnitt
+            "average": [durchschnitt] * len(noten),  # Wiederhole den Durchschnitt für jedes Modul
+            "timestamp": [pd.Timestamp.now()] * len(noten)  # Füge einen Zeitstempel für jedes Modul hinzu
         }
+
+        # Speichern Sie die Daten in der Session
+        if 'data_df' not in st.session_state:
+            st.session_state['data_df'] = pd.DataFrame(columns=['module', 'grades', 'average', 'timestamp'])
+        
+        new_data = pd.DataFrame(result)
+        st.session_state['data_df'] = pd.concat([st.session_state['data_df'], new_data], ignore_index=True)
 
         DataManager().append_record(session_state_key='data_df', record_dict=result)  # update data in session state and storage
