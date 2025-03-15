@@ -1,0 +1,118 @@
+module,Noten,average,Zeitpunkt
+Biologie 2,3.0,3.0,2025-03-15 19:26:01.053917
+Chemie 2,3.0,3.0,2025-03-15 19:26:01.053917
+Informatik 2,3.0,3.0,2025-03-15 19:26:01.053917
+Mathematik 2,3.0,3.0,2025-03-15 19:26:01.053917
+Physik,3.0,3.0,2025-03-15 19:26:01.053917
+Englisch 2,3.0,3.0,2025-03-15 19:26:01.053917
+Gesellschaftlicher Kontext und Sprache 2,3.0,3.0,2025-03-15 19:26:01.053917
+Klinische Chemie und Immunologie 1,3.0,3.0,2025-03-15 19:26:01.053917
+Histologie und Zytologie 1,3.0,3.0,2025-03-15 19:26:01.053917
+Medizinische Mikrobiologie 2,3.0,3.0,2025-03-15 19:26:01.053917
+Hämatologie und Hämostaseologie 2,3.0,3.0,2025-03-15 19:26:01.053917
+Grundlagenpraktikum 2,3.0,3.0,2025-03-15 19:26:01.053917
+"['Biologie 2', 'Chemie 2', 'Informatik 2', 'Mathematik 2', 'Physik', 'Englisch 2', 'Gesellschaftlicher Kontext und Sprache 2', 'Klinische Chemie und Immunologie 1', 'Histologie und Zytologie 1', 'Medizinische Mikrobiologie 2', 'Hämatologie und Hämostaseologie 2', 'Grundlagenpraktikum 2']","[3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0]",,"[Timestamp('2025-03-15 19:26:01.053917'), Timestamp('2025-03-15 19:26:01.053917'), Timestamp('2025-03-15 19:26:01.053917'), Timestamp('2025-03-15 19:26:01.053917'), Timestamp('2025-03-15 19:26:01.053917'), Timestamp('2025-03-15 19:26:01.053917'), Timestamp('2025-03-15 19:26:01.053917'), Timestamp('2025-03-15 19:26:01.053917'), Timestamp('2025-03-15 19:26:01.053917'), Timestamp('2025-03-15 19:26:01.053917'), Timestamp('2025-03-15 19:26:01.053917'), Timestamp('2025-03-15 19:26:01.053917')]"
+Biologie 2,3.0,3.0,2025-03-15 19:32:22.442085
+Chemie 2,3.0,3.0,2025-03-15 19:32:22.442085
+Informatik 2,3.0,3.0,2025-03-15 19:32:22.442085
+Mathematik 2,3.0,3.0,2025-03-15 19:32:22.442085
+Physik,3.0,3.0,2025-03-15 19:32:22.442085
+Englisch 2,3.0,3.0,2025-03-15 19:32:22.442085
+Gesellschaftlicher Kontext und Sprache 2,3.0,3.0,2025-03-15 19:32:22.442085
+Klinische Chemie und Immunologie 1,3.0,3.0,2025-03-15 19:32:22.442085
+Histologie und Zytologie 1,3.0,3.0,2025-03-15 19:32:22.442085
+Medizinische Mikrobiologie 2,3.0,3.0,2025-03-15 19:32:22.442085
+Hämatologie und Hämostaseologie 2,3.0,3.0,2025-03-15 19:32:22.442085
+Grundlagenpraktikum 2,3.0,3.0,2025-03-15 19:32:22.442085
+"['Biologie 2', 'Chemie 2', 'Informatik 2', 'Mathematik 2', 'Physik', 'Englisch 2', 'Gesellschaftlicher Kontext und Sprache 2', 'Klinische Chemie und Immunologie 1', 'Histologie und Zytologie 1', 'Medizinische Mikrobiologie 2', 'Hämatologie und Hämostaseologie 2', 'Grundlagenpraktikum 2']","[3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0]",,"[Timestamp('2025-03-15 19:32:22.442085'), Timestamp('2025-03-15 19:32:22.442085'), Timestamp('2025-03-15 19:32:22.442085'), Timestamp('2025-03-15 19:32:22.442085'), Timestamp('2025-03-15 19:32:22.442085'), Timestamp('2025-03-15 19:32:22.442085'), Timestamp('2025-03-15 19:32:22.442085'), Timestamp('2025-03-15 19:32:22.442085'), Timestamp('2025-03-15 19:32:22.442085'), Timestamp('2025-03-15 19:32:22.442085'), Timestamp('2025-03-15 19:32:22.442085'), Timestamp('2025-03-15 19:32:22.442085')]"
+Biologie 2,6.0,3.4645161290322584,2025-03-15 19:37:25.786091
+Chemie 2,4.8,3.4645161290322584,2025-03-15 19:37:25.786091
+Informatik 2,3.0,3.4645161290322584,2025-03-15 19:37:25.786091
+Mathematik 2,3.0,3.4645161290322584,2025-03-15 19:37:25.786091
+Physik,3.0,3.4645161290322584,2025-03-15 19:37:25.786091
+Englisch 2,3.0,3.4645161290322584,2025-03-15 19:37:25.786091
+Gesellschaftlicher Kontext und Sprache 2,3.0,3.4645161290322584,2025-03-15 19:37:25.786091
+Klinische Chemie und Immunologie 1,3.0,3.4645161290322584,2025-03-15 19:37:25.786091
+Histologie und Zytologie 1,3.0,3.4645161290322584,2025-03-15 19:37:25.786091
+Medizinische Mikrobiologie 2,3.0,3.4645161290322584,2025-03-15 19:37:25.786091
+Hämatologie und Hämostaseologie 2,3.0,3.4645161290322584,2025-03-15 19:37:25.786091
+Grundlagenpraktikum 2,3.0,3.4645161290322584,2025-03-15 19:37:25.786091
+"['Biologie 2', 'Chemie 2', 'Informatik 2', 'Mathematik 2', 'Physik', 'Englisch 2', 'Gesellschaftlicher Kontext und Sprache 2', 'Klinische Chemie und Immunologie 1', 'Histologie und Zytologie 1', 'Medizinische Mikrobiologie 2', 'Hämatologie und Hämostaseologie 2', 'Grundlagenpraktikum 2']","[6.0, 4.8, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0]",,2025-03-15 19:37:25.786091
+Biologie 2,3.0,3.1806451612903226,2025-03-15 19:40:17.972825
+Chemie 2,3.0,3.1806451612903226,2025-03-15 19:40:17.972825
+Informatik 2,5.8,3.1806451612903226,2025-03-15 19:40:17.972825
+Mathematik 2,3.0,3.1806451612903226,2025-03-15 19:40:17.972825
+Physik,3.0,3.1806451612903226,2025-03-15 19:40:17.972825
+Englisch 2,3.0,3.1806451612903226,2025-03-15 19:40:17.972825
+Gesellschaftlicher Kontext und Sprache 2,3.0,3.1806451612903226,2025-03-15 19:40:17.972825
+Klinische Chemie und Immunologie 1,3.0,3.1806451612903226,2025-03-15 19:40:17.972825
+Histologie und Zytologie 1,3.0,3.1806451612903226,2025-03-15 19:40:17.972825
+Medizinische Mikrobiologie 2,3.0,3.1806451612903226,2025-03-15 19:40:17.972825
+Hämatologie und Hämostaseologie 2,3.0,3.1806451612903226,2025-03-15 19:40:17.972825
+Grundlagenpraktikum 2,3.0,3.1806451612903226,2025-03-15 19:40:17.972825
+"['Biologie 2', 'Chemie 2', 'Informatik 2', 'Mathematik 2', 'Physik', 'Englisch 2', 'Gesellschaftlicher Kontext und Sprache 2', 'Klinische Chemie und Immunologie 1', 'Histologie und Zytologie 1', 'Medizinische Mikrobiologie 2', 'Hämatologie und Hämostaseologie 2', 'Grundlagenpraktikum 2']","[3.0, 3.0, 5.8, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0]",,"[Timestamp('2025-03-15 19:40:17.972825'), Timestamp('2025-03-15 19:40:17.972825'), Timestamp('2025-03-15 19:40:17.972825'), Timestamp('2025-03-15 19:40:17.972825'), Timestamp('2025-03-15 19:40:17.972825'), Timestamp('2025-03-15 19:40:17.972825'), Timestamp('2025-03-15 19:40:17.972825'), Timestamp('2025-03-15 19:40:17.972825'), Timestamp('2025-03-15 19:40:17.972825'), Timestamp('2025-03-15 19:40:17.972825'), Timestamp('2025-03-15 19:40:17.972825'), Timestamp('2025-03-15 19:40:17.972825')]"
+Biologie 2,3.0,3.0,2025-03-15 19:44:09.180472
+Chemie 2,3.0,3.0,2025-03-15 19:44:09.180472
+Informatik 2,3.0,3.0,2025-03-15 19:44:09.180472
+Mathematik 2,3.0,3.0,2025-03-15 19:44:09.180472
+Physik,3.0,3.0,2025-03-15 19:44:09.180472
+Englisch 2,3.0,3.0,2025-03-15 19:44:09.180472
+Gesellschaftlicher Kontext und Sprache 2,3.0,3.0,2025-03-15 19:44:09.180472
+Klinische Chemie und Immunologie 1,3.0,3.0,2025-03-15 19:44:09.180472
+Histologie und Zytologie 1,3.0,3.0,2025-03-15 19:44:09.180472
+Medizinische Mikrobiologie 2,3.0,3.0,2025-03-15 19:44:09.180472
+Hämatologie und Hämostaseologie 2,3.0,3.0,2025-03-15 19:44:09.180472
+Grundlagenpraktikum 2,3.0,3.0,2025-03-15 19:44:09.180472
+"['Biologie 2', 'Chemie 2', 'Informatik 2', 'Mathematik 2', 'Physik', 'Englisch 2', 'Gesellschaftlicher Kontext und Sprache 2', 'Klinische Chemie und Immunologie 1', 'Histologie und Zytologie 1', 'Medizinische Mikrobiologie 2', 'Hämatologie und Hämostaseologie 2', 'Grundlagenpraktikum 2']","[3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0]",,2025-03-15 19:44:09.180472
+Biologie 2,3.0,3.0,2025-03-15 21:21:24.636665
+Chemie 2,3.0,3.0,2025-03-15 21:21:24.636665
+Informatik 2,3.0,3.0,2025-03-15 21:21:24.636665
+Mathematik 2,3.0,3.0,2025-03-15 21:21:24.636665
+Physik,3.0,3.0,2025-03-15 21:21:24.636665
+Englisch 2,3.0,3.0,2025-03-15 21:21:24.636665
+Gesellschaftlicher Kontext und Sprache 2,3.0,3.0,2025-03-15 21:21:24.636665
+Klinische Chemie und Immunologie 1,3.0,3.0,2025-03-15 21:21:24.636665
+Histologie und Zytologie 1,3.0,3.0,2025-03-15 21:21:24.636665
+Medizinische Mikrobiologie 2,3.0,3.0,2025-03-15 21:21:24.636665
+Hämatologie und Hämostaseologie 2,3.0,3.0,2025-03-15 21:21:24.636665
+Grundlagenpraktikum 2,3.0,3.0,2025-03-15 21:21:24.636665
+"['Biologie 2', 'Chemie 2', 'Informatik 2', 'Mathematik 2', 'Physik', 'Englisch 2', 'Gesellschaftlicher Kontext und Sprache 2', 'Klinische Chemie und Immunologie 1', 'Histologie und Zytologie 1', 'Medizinische Mikrobiologie 2', 'Hämatologie und Hämostaseologie 2', 'Grundlagenpraktikum 2']","[3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0]",,2025-03-15 21:21:24.636665
+Biologie 2,5.0,4.509677419354839,2025-03-15 21:33:06.866437
+Chemie 2,5.0,4.509677419354839,2025-03-15 21:33:06.866437
+Informatik 2,6.0,4.509677419354839,2025-03-15 21:33:06.866437
+Mathematik 2,3.0,4.509677419354839,2025-03-15 21:33:06.866437
+Physik,3.0,4.509677419354839,2025-03-15 21:33:06.866437
+Englisch 2,4.0,4.509677419354839,2025-03-15 21:33:06.866437
+Gesellschaftlicher Kontext und Sprache 2,5.0,4.509677419354839,2025-03-15 21:33:06.866437
+Klinische Chemie und Immunologie 1,4.9,4.509677419354839,2025-03-15 21:33:06.866437
+Histologie und Zytologie 1,5.0,4.509677419354839,2025-03-15 21:33:06.866437
+Medizinische Mikrobiologie 2,5.0,4.509677419354839,2025-03-15 21:33:06.866437
+Hämatologie und Hämostaseologie 2,5.0,4.509677419354839,2025-03-15 21:33:06.866437
+Grundlagenpraktikum 2,4.0,4.509677419354839,2025-03-15 21:33:06.866437
+"['Biologie 2', 'Chemie 2', 'Informatik 2', 'Mathematik 2', 'Physik', 'Englisch 2', 'Gesellschaftlicher Kontext und Sprache 2', 'Klinische Chemie und Immunologie 1', 'Histologie und Zytologie 1', 'Medizinische Mikrobiologie 2', 'Hämatologie und Hämostaseologie 2', 'Grundlagenpraktikum 2']","[5.0, 5.0, 6.0, 3.0, 3.0, 4.0, 5.0, 4.9, 5.0, 5.0, 5.0, 4.0]","[4.509677419354839, 4.509677419354839, 4.509677419354839, 4.509677419354839, 4.509677419354839, 4.509677419354839, 4.509677419354839, 4.509677419354839, 4.509677419354839, 4.509677419354839, 4.509677419354839, 4.509677419354839]",2025-03-15 21:33:06.866437
+Biologie 2,3.0,3.0,2025-03-15 21:35:06.629428
+Chemie 2,3.0,3.0,2025-03-15 21:35:06.629428
+Informatik 2,3.0,3.0,2025-03-15 21:35:06.629428
+Mathematik 2,3.0,3.0,2025-03-15 21:35:06.629428
+Physik,3.0,3.0,2025-03-15 21:35:06.629428
+Englisch 2,3.0,3.0,2025-03-15 21:35:06.629428
+Gesellschaftlicher Kontext und Sprache 2,3.0,3.0,2025-03-15 21:35:06.629428
+Klinische Chemie und Immunologie 1,3.0,3.0,2025-03-15 21:35:06.629428
+Histologie und Zytologie 1,3.0,3.0,2025-03-15 21:35:06.629428
+Medizinische Mikrobiologie 2,3.0,3.0,2025-03-15 21:35:06.629428
+Hämatologie und Hämostaseologie 2,3.0,3.0,2025-03-15 21:35:06.629428
+Grundlagenpraktikum 2,3.0,3.0,2025-03-15 21:35:06.629428
+"['Biologie 2', 'Chemie 2', 'Informatik 2', 'Mathematik 2', 'Physik', 'Englisch 2', 'Gesellschaftlicher Kontext und Sprache 2', 'Klinische Chemie und Immunologie 1', 'Histologie und Zytologie 1', 'Medizinische Mikrobiologie 2', 'Hämatologie und Hämostaseologie 2', 'Grundlagenpraktikum 2']","[3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0]","[3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0]",2025-03-15 21:35:06.629428
+Biologie 2,5.0,4.27741935483871,2025-03-15 21:38:21.691288
+Chemie 2,4.0,4.27741935483871,2025-03-15 21:38:21.691288
+Informatik 2,5.0,4.27741935483871,2025-03-15 21:38:21.691288
+Mathematik 2,3.0,4.27741935483871,2025-03-15 21:38:21.691288
+Physik,4.0,4.27741935483871,2025-03-15 21:38:21.691288
+Englisch 2,4.0,4.27741935483871,2025-03-15 21:38:21.691288
+Gesellschaftlicher Kontext und Sprache 2,5.0,4.27741935483871,2025-03-15 21:38:21.691288
+Klinische Chemie und Immunologie 1,4.8,4.27741935483871,2025-03-15 21:38:21.691288
+Histologie und Zytologie 1,4.0,4.27741935483871,2025-03-15 21:38:21.691288
+Medizinische Mikrobiologie 2,4.0,4.27741935483871,2025-03-15 21:38:21.691288
+Hämatologie und Hämostaseologie 2,5.0,4.27741935483871,2025-03-15 21:38:21.691288
+Grundlagenpraktikum 2,4.0,4.27741935483871,2025-03-15 21:38:21.691288
+"['Biologie 2', 'Chemie 2', 'Informatik 2', 'Mathematik 2', 'Physik', 'Englisch 2', 'Gesellschaftlicher Kontext und Sprache 2', 'Klinische Chemie und Immunologie 1', 'Histologie und Zytologie 1', 'Medizinische Mikrobiologie 2', 'Hämatologie und Hämostaseologie 2', 'Grundlagenpraktikum 2']","[5.0, 4.0, 5.0, 3.0, 4.0, 4.0, 5.0, 4.8, 4.0, 4.0, 5.0, 4.0]","[4.27741935483871, 4.27741935483871, 4.27741935483871, 4.27741935483871, 4.27741935483871, 4.27741935483871, 4.27741935483871, 4.27741935483871, 4.27741935483871, 4.27741935483871, 4.27741935483871, 4.27741935483871]",2025-03-15 21:38:21.691288
