@@ -1,5 +1,11 @@
 import streamlit as st
 import pandas as pd
+from utils.data_manager import DataManager
+from utils.login_manager import LoginManager
+
+# Überprüfen, ob die Seite im richtigen Kontext aufgerufen wird
+if 'login' not in st.session_state:
+    LoginManager().go_to_login('Start.py') 
 
 st.title("📊 Gespeicherte Noten")
 
@@ -36,6 +42,10 @@ else:
 
     # Datum formatieren für bessere Lesbarkeit
     df['Datum'] = pd.to_datetime(df['Datum']).dt.strftime('%d.%m.%Y %H:%M:%S')
+
+    # Entferne die letzte Zeile, falls sie eine fehlerhafte oder doppelte Gesamtzeile ist
+    if not df.empty:
+        df = df.iloc[:-1]
 
     # Farbige Hervorhebung basierend auf Datum/Uhrzeit
     def highlight_groups(s):

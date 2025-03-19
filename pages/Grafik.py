@@ -1,55 +1,61 @@
 import sys
 import os
+import streamlit as st
+import pandas as pd
+import matplotlib.pyplot as plt
+
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-import streamlit as st
-import matplotlib.pyplot as plt
-import pandas as pd
 from utils.data_manager import DataManager
 from utils.login_manager import LoginManager
 
-# Überprüfen, ob die Seite im richtigen Kontext aufgerufen wird
+# Login-Überprüfung
 if 'login' not in st.session_state:
-    LoginManager().go_to_login('Start.py') 
+    LoginManager().go_to_login('Start.py')
 
-st.title("📊 Durchschnittsnote BMLD Frühlingssemester 2025")
+st.title("📊 Grafik")
+st.write("Hier kannst du deine gespeicherten Notendaten und deren Entwicklung über die Zeit einsehen.")
 
-# Daten abrufen
+# Laden der gespeicherten Daten
 if 'data_df' in st.session_state and not st.session_state['data_df'].empty:
     df = st.session_state['data_df'].copy()
     
-    # Entferne die ersten beiden Zeilen
-    df = df.iloc[2:].reset_index(drop=True)
+    # Sicherstellen, dass 'timestamp' ein Datetime-Typ ist
+    df['timestamp'] = pd.to_datetime(df['timestamp'], errors='coerce')
     
-    # Spalten umbenennen
-    df = df.rename(columns={'module': 'Moldule', 'grades': 'Noten', 'timestamp': 'Datum'})
+    # Sicherstellen, dass 'average' numerisch ist
+    df['average'] = pd.to_numeric(df['average'], errors='coerce')
     
-    # Falls die 'Datum'-Spalte Listen enthält, extrahiere nur das erste Element
-    df['Datum'] = df['Datum'].apply(lambda x: x[0] if isinstance(x, list) else x)
+    # Entfernen von Zeilen mit ungültigen Werten
+    df = df.dropna(subset=['timestamp', 'average'])
     
-    # Stelle sicher, dass 'Datum' ein echtes Datumsformat hat
-    df['Datum'] = pd.to_datetime(df['Datum'], errors='coerce').dt.date  # Nur das Datum extrahieren
-    
-    # Stelle sicher, dass die 'Noten'-Spalte numerisch ist
-    df['Noten'] = pd.to_numeric(df['Noten'], errors='coerce')
-    df = df.dropna(subset=['Noten'])
-    
-    # Gruppiere die Daten nach Datum und berechne den Durchschnitt
-    durchschnittswerte = df.groupby('Datum')['Noten'].mean()
-    
-    # Setze das Startdatum auf das erste Eingabedatum
-    startdatum = df['Datum'].min()
-    
-    st.subheader("📈 Entwicklung deines Durchschnitts")
-    
-    fig, ax = plt.subplots()
-    ax.plot(durchschnittswerte.index, durchschnittswerte.values, marker='o', linestyle='-', color='b')
-    ax.set_xlabel("Datum")
-    ax.set_ylabel("Durchschnittsnote")
-    ax.set_title("Verlauf der Durchschnittsnote")
-    ax.set_xlim(left=startdatum)  # Setze das Startdatum der x-Achse
-    plt.xticks(rotation=45, ha='right')
-    
+    # Sortieren nach Datum (von früh nach spät)
+    df = df.sort_values(by='timestamp')
+
+    # Mittelwerte für gleiche Zeitstempel berechnen
+    df_avg = df.groupby('timestamp', as_index=True)['average'].mean()
+
+    # Sicherstellen, dass die Daten nach Zeit aufsteigend sortiert sind
+    df_avg = df_avg.sort_index()
+
+    # Fortlaufende Indexwerte für die X-Achse generieren (statt Zeitstempel)
+    x_values = range(len(df_avg))  # 0, 1, 2, 3, ...
+
+    st.subheader("📊 Durchschnittsverlauf")
+    fig, ax = plt.subplots(figsize=(8, 5))
+
+    # Linien-Plot mit Datenpunkten
+    ax.plot(x_values, df_avg.values, marker='o', linestyle='-', color='blue', label='Durchschnitt')
+
+    ax.set_ylabel("Durchschnitt")
+    ax.set_xlabel("Datum")  # Änderung: Messpunkt -> Datum
+    ax.set_title("Entwicklung des Durchschnitts")
+    ax.legend()
+
+    # Setzt die X-Achsen-Ticks auf die tatsächlichen Datenpunkte (keine Zeitstempel)
+    ax.set_xticks(x_values)
+    ax.set_xticklabels(df_avg.index.strftime('%Y-%m-%d'), rotation=45)
+
     st.pyplot(fig)
 else:
-    st.warning("❌ Noch keine Durchschnittswerte gespeichert!")
+    st.warning("Keine gespeicherten Daten vorhanden.")
