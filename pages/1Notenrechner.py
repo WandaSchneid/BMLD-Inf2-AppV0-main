@@ -12,7 +12,7 @@ from utils.login_manager import LoginManager
 if 'login' not in st.session_state:
     LoginManager().go_to_login('Start.py') 
 
-st.title("Notenrechner BMLD Frühlingssemseter 2025")
+st.title("Notenrechner BMLD Frühlingssemester 2025")
 
 st.write("Diese Seite berechnet deine Note.")
 
@@ -65,18 +65,24 @@ if page == "Notenrechner:":
         st.pyplot(fig)
 
         # Definiere das result Dictionary
-        result = {  
+        result = {
             "module": list(noten.keys()),
             "grades": list(noten.values()),
             "average": [durchschnitt] * len(noten),  # Wiederhole den Durchschnitt für jedes Modul
-            "timestamp": pd.Timestamp.now()  # Füge einen einzelnen Zeitstempel hinzu
+            "timestamp": [pd.Timestamp.now()] * len(noten)  # Füge einen Zeitstempel für jedes Modul hinzu
         }
 
         # Speichern Sie die Daten in der Session
         if 'data_df' not in st.session_state:
             st.session_state['data_df'] = pd.DataFrame(columns=['module', 'grades', 'average', 'timestamp'])
-        
-        new_data = pd.DataFrame(result, index=[0])
+
+        # Erstellen Sie einen DataFrame aus dem result-Dictionary
+        new_data = pd.DataFrame(result)
+
+        # Fügen Sie die neuen Daten zum bestehenden DataFrame hinzu
         st.session_state['data_df'] = pd.concat([st.session_state['data_df'], new_data], ignore_index=True)
 
-        DataManager().append_record(session_state_key='data_df', record_dict=result)  # update data in session state and storage
+        # Speichern Sie die Daten persistent
+        data_manager = DataManager()
+        for _, row in new_data.iterrows():
+            data_manager.append_record(session_state_key='data_df', record_dict=row.to_dict())
