@@ -1,10 +1,5 @@
-import sys
-import os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-
 import streamlit as st
 import matplotlib.pyplot as plt
-import pandas as pd  # Import pandas
 from utils.data_manager import DataManager
 from utils.login_manager import LoginManager
 
@@ -65,24 +60,8 @@ if page == "Notenrechner:":
         st.pyplot(fig)
 
         # Definiere das result Dictionary
-        result = {
-            "module": list(noten.keys()),
-            "grades": list(noten.values()),
-            "average": [durchschnitt] * len(noten),  # Wiederhole den Durchschnitt für jedes Modul
-            "timestamp": [pd.Timestamp.now()] * len(noten)  # Füge einen Zeitstempel für jedes Modul hinzu
-        }
-
-        # Speichern Sie die Daten in der Session
-        if 'data_df' not in st.session_state:
-            st.session_state['data_df'] = pd.DataFrame(columns=['module', 'grades', 'average', 'timestamp'])
-
-        # Erstellen Sie einen DataFrame aus dem result-Dictionary
-        new_data = pd.DataFrame(result)
-
-        # Fügen Sie die neuen Daten zum bestehenden DataFrame hinzu
-        st.session_state['data_df'] = pd.concat([st.session_state['data_df'], new_data], ignore_index=True)
-
-        # Speichern Sie die Daten persistent
-        data_manager = DataManager()
-        for _, row in new_data.iterrows():
-            data_manager.append_record(session_state_key='data_df', record_dict=row.to_dict())
+        from utils.helpers import ch_now
+        result = {'timestamp': ch_now()}
+        result.update(noten)
+            
+        DataManager().append_record(session_state_key='data_df', record_dict=result)
