@@ -4,19 +4,19 @@ import pandas as pd
 from utils.data_manager import DataManager
 from utils.login_manager import LoginManager
 
-# initialize the data manager
-data_manager = DataManager(fs_protocol='webdav', fs_root_folder="BMLD_App_Notenrechner")  # switch drive 
+# Initialisieren des Data Managers
+data_manager = DataManager(fs_protocol='webdav', fs_root_folder="BMLD_App_Notenrechner")  # Wechseln des Laufwerks
 
-# initialize the login manager
+# Initialisieren des Login Managers
 login_manager = LoginManager(data_manager)
-login_manager.login_register()  # open login/register page
+login_manager.login_register()  # Öffnen der Login-/Registrierungsseite
 
-# load the data from the persistent storage into the session state
+# Laden der Daten aus dem persistenten Speicher in den Session-State
 data_manager.load_user_data(
     session_state_key='data_df', 
     file_name='data.csv', 
-    initial_value = pd.DataFrame()
-    )
+    initial_value=pd.DataFrame()
+)
 
 page = "Startseite"
 

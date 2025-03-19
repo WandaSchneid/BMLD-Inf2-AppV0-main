@@ -76,7 +76,7 @@ if page == "Notenrechner:":
         if 'data_df' not in st.session_state:
             st.session_state['data_df'] = pd.DataFrame(columns=['module', 'grades', 'average', 'timestamp'])
         
-        new_data = pd.DataFrame(result)
+        new_data = pd.DataFrame(result, index=[0])
         st.session_state['data_df'] = pd.concat([st.session_state['data_df'], new_data], ignore_index=True)
 
         DataManager().append_record(session_state_key='data_df', record_dict=result)  # update data in session state and storage
