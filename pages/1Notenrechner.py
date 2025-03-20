@@ -27,7 +27,7 @@ if page == "Notenrechner:":
         "Biologie 2": 3, "Chemie 2": 3, "Informatik 2": 2, "Mathematik 2": 3,
         "Physik": 3, "Englisch 2": 2, "Gesellschaftlicher Kontext und Sprache 2": 2,
         "Klinische Chemie und Immunologie 1": 2, "Histologie und Zytologie 1": 3,
-        "Medizinische Mikrobiologie 2": 2, "Hämatologie und Hämostaseologie 2": 3,
+        "Medizinische Mikrobiologie 2": 2, "Haematologie und Haemostaseologie 2": 3,
         "Grundlagenpraktikum 2": 3
     }
 
