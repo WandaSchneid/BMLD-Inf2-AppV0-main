@@ -45,6 +45,4 @@ if page == "Startseite":
     Diese App wurde von folgenden Personen entwickelt:
     - Wanda Schneid (schnewan@students.zhaw.ch)
     - Riccardo Reich (reichri1@students.zhaw.ch)
-
-    Diese App ist das leere Gerüst für die App-Entwicklung im Modul Informatik 2 (BMLD/ZHAW)
     """)
