@@ -1,6 +1,6 @@
 # BMLD-Inf2-AppV0
 
-Unsere ersten Versuche eine App zu gestalten
+Dies ist eine einfache, selbst erstellte Notenrechner-App, geschrieben in Python. Die Anwendung berechnet Noten basierend auf dem ECTS-System und ermittelt zusätzlich Durchschnittswerte, welche in einer Grafik dargestellt werden und in einem Verlauf für dich gespeichert werden.
 
 ## Autor
 
